@@ -25,10 +25,13 @@ jobs:
       with:
         python-version: '3.8'  # Specify the Python version you need
 
+    - name: Change to the correct directory
+      run: cd nlp_service
+      
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r nlp_service/requirements.txt
 
     - name: Run tests
       run: |
